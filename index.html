@@ -162,7 +162,7 @@
       }
       if(e.target.closest('.call-btn')){
         const btn = e.target.closest('.call-btn');
-        if(state.coins<20){alert('Not enough coins!');return;}
+        if(state.coins<20){alert('You do not have enough coins. At least 20 coins will need to call!');return;}
         state.coins-=20; updateNavbar();
         alert(`Calling ${btn.dataset.name} — ${btn.dataset.number}`);
         state.history.unshift({name:btn.dataset.name,number:btn.dataset.number,time:formatTime()});
